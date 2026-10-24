@@ -26,27 +26,6 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* Page Transition Curtain Overlay - Starts Opaque to hide loading jumps */
-#page-transition-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: #ffffff;
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 0.35s ease-in-out, visibility 0.35s ease-in-out;
-    z-index: 99999;
-    pointer-events: auto;
-}
-
-#page-transition-overlay.fade-out {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-}
-
 /* Glass Header Navigation */
 header#header {
     position: sticky;
