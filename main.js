@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. Ensure overlay element exists
+    // 1. Inject overlay dynamically
     let overlay = document.getElementById("page-transition-overlay");
     if (!overlay) {
         overlay = document.createElement("div");
@@ -7,10 +7,11 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.appendChild(overlay);
     }
 
-    // 2. Smoothly fade out the curtain once the page loads
+    // 2. Smoothly fade out the curtain on initial load
     setTimeout(() => {
-        overlay.classList.add("fade-out");
-    }, 60);
+        overlay.classList.add("hidden");
+        overlay.classList.remove("active");
+    }, 50);
 
     // 3. Intercept navigation links for smooth curtain transition
     document.addEventListener("click", (e) => {
@@ -28,13 +29,14 @@ document.addEventListener("DOMContentLoaded", () => {
             ) {
                 e.preventDefault();
 
-                // Fade in the white curtain
-                overlay.classList.remove("fade-out");
+                // Trigger curtain transition
+                overlay.classList.remove("hidden");
+                overlay.classList.add("active");
 
-                // Navigate after curtain fully covers screen
+                // Navigate after curtain fully obscures screen
                 setTimeout(() => {
                     window.location.href = targetUrl;
-                }, 350);
+                }, 400);
             }
         }
     });
