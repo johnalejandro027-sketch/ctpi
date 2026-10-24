@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Clio Tech Plastic Inc.</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+
+    <header id="header">
+        <div class="nav-links-container">
+            <a href="index.html" class="custom-logo-link">
+                <img src="cliotech.jpg" alt="Clio Tech Plastic Inc." onerror="this.src='https://via.placeholder.com/180x50?text=ClioTech'">
+            </a>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                </ul>
+            </nav>
+            <a href="contact.html" class="btn-contact-top active-btn">CONTACT US ↗</a>
+        </div>
+    </header>
+
+    <section class="hero-page-header">
+        <span class="section-tag">Get In Touch</span>
+        <h1>We'd Love to Hear From You</h1>
+        <p>Have inquiries about plastic injection mold fabrication, machine repair, or plant layout setup? Send us a message below.</p>
+    </section>
+
+    <section class="services-container">
+        <div style="background: #ffffff; border-radius: 20px; border: 1px solid #e2e8f0; padding: 48px; box-shadow: var(--card-shadow); display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 48px;">
+
+            <!-- Contact & Facility Details -->
+            <div>
+                <span class="section-tag">Corporate Locations</span>
+                <h2 style="font-size: 32px; font-weight: 800; margin-bottom: 24px; color: var(--dark-text);">Our Facilities</h2>
+
+                <div style="margin-bottom: 24px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: var(--dark-text); margin-bottom: 6px;">Valenzuela Main Branch</h4>
+                    <p style="font-size: 15px; color: var(--body-text); margin: 0;">Pearl Island Subd. Phase II, Brgy. Punturin, Valenzuela City, Metro Manila</p>
+                </div>
+
+                <div style="margin-bottom: 24px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: var(--dark-text); margin-bottom: 6px;">Quezon City Facility</h4>
+                    <p style="font-size: 15px; color: var(--body-text); margin: 0;">29 Eulogia Drive, Brgy. Apolonio Samson, Balintawak, 1106 Metro Manila</p>
+                </div>
+
+                <div style="margin-bottom: 24px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: var(--dark-text); margin-bottom: 6px;">Direct Channels</h4>
+                    <p style="font-size: 15px; color: var(--body-text); margin: 0;">✉ sales@itung.com.ph<br>📞 (+63) 2 8361 3550</p>
+                </div>
+            </div>
+
+            <!-- Interactive Inquiry Form -->
+            <div>
+                <form action="#" method="POST" style="display: flex; flex-direction: column; gap: 18px;">
+                    <div>
+                        <label for="fullName" style="display: block; font-size: 14px; font-weight: 700; color: var(--dark-text); margin-bottom: 6px;">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="John Doe" required style="width: 100%; padding: 12px 16px; border-radius: 8px; border: 1px solid #cbd5e1; font-size: 15px; outline: none; background: #f8fafc;">
+                    </div>
+
+                    <div>
+                        <label for="email" style="display: block; font-size: 14px; font-weight: 700; color: var(--dark-text); margin-bottom: 6px;">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="john@company.com" required style="width: 100%; padding: 12px 16px; border-radius: 8px; border: 1px solid #cbd5e1; font-size: 15px; outline: none; background: #f8fafc;">
+                    </div>
+
+                    <div>
+                        <label for="service" style="display: block; font-size: 14px; font-weight: 700; color: var(--dark-text); margin-bottom: 6px;">Service Required</label>
+                        <select id="service" name="service" style="width: 100%; padding: 12px 16px; border-radius: 8px; border: 1px solid #cbd5e1; font-size: 15px; outline: none; background: #f8fafc; color: var(--dark-text);">
+                            <option value="mold-fabrication">Mold Fabrication & Tooling</option>
+                            <option value="machine-servicing">Machine Repair & Servicing</option>
+                            <option value="plant-layout">Plant Layout Engineering</option>
+                            <option value="other">General Business Inquiry</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="message" style="display: block; font-size: 14px; font-weight: 700; color: var(--dark-text); margin-bottom: 6px;">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell us about your requirements..." required style="width: 100%; padding: 12px 16px; border-radius: 8px; border: 1px solid #cbd5e1; font-size: 15px; outline: none; background: #f8fafc; resize: vertical;"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-inquire" style="border: none; cursor: pointer; padding: 14px; font-size: 15px; width: 100%;">Send Message ↗</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Clio Tech Plastic Inc. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
