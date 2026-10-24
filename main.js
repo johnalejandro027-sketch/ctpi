@@ -7,7 +7,12 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.appendChild(overlay);
     }
 
-    // 2. Intercept navigation links for smooth curtain transition
+    // 2. Smoothly fade out the curtain once the page loads
+    setTimeout(() => {
+        overlay.classList.add("fade-out");
+    }, 60);
+
+    // 3. Intercept navigation links for smooth curtain transition
     document.addEventListener("click", (e) => {
         const link = e.target.closest("a");
 
@@ -23,10 +28,10 @@ document.addEventListener("DOMContentLoaded", () => {
             ) {
                 e.preventDefault();
 
-                // Trigger curtain fade-in smoothly
-                overlay.classList.add("active");
+                // Fade in the white curtain
+                overlay.classList.remove("fade-out");
 
-                // Navigate after curtain covers screen
+                // Navigate after curtain fully covers screen
                 setTimeout(() => {
                     window.location.href = targetUrl;
                 }, 350);
